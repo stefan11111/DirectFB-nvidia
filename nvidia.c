@@ -1009,6 +1009,7 @@ static void nv30CheckState( void *drv, void *dev,
                     if (!dfb_palette_equal( source->palette,
                                             destination->palette ))
                          return;
+               /* FALLTHROUGH */
                case DSPF_A8:
                case DSPF_RGB332:
                case DSPF_RGB555:

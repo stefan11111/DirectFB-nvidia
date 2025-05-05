@@ -1,6 +1,6 @@
 .POSIX:
 
-XCFLAGS = ${CFLAGS} -nostdlib -std=c99 -fPIC -pthread \
+XCFLAGS = ${CFLAGS} -nostdlib -std=c99 -fPIC -pthread -Wno-sign-compare\
 		  -Wall -Wextra -Wno-pedantic -Wmissing-prototypes -Wstrict-prototypes \
 		  -Wno-unused-parameter -I. $(shell pkg-config --cflags directfb-internal)
 XLDFLAGS = ${LDFLAGS} -shared -Wl,-soname,libdirectfb_nvidia.so $(shell pkg-config --libs directfb-internal)
